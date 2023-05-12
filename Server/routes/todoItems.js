@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-
 const todoItemsModel = require("../models/toDoItems");
 
 //Add item to to do list
@@ -40,7 +39,6 @@ router.put("/api/item/:id", async (req, res) => {
       { $set: newToDoItem }
     );
     res.status(200).json({ updateToDoItem });
-    console.log("Updated Successfully");
   } catch (err) {
     console.log(err);
   }
