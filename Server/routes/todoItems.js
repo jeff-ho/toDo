@@ -10,8 +10,8 @@ router.post("/api/item", async (req, res) => {
       item: req.body.item,
     });
 
-    await newToDoItem.save();
-    res.status(200).json("Item added successfully");
+    const saveItem = await newToDoItem.save();
+    res.status(200).json(saveItem);
   } catch (err) {
     res.json(err);
   }

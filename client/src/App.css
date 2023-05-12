@@ -1,38 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+}
+
+body {
+  font-family: "Lilita One", sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  max-width: 70rem;
+  margin: 12rem auto;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 5px 5px 34px #bebebe, -5px -5px 34px #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 4.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 3.2rem;
+  color: #b197fc;
+  text-shadow: 0.8px 1.2px 2.5px rgba(84, 79, 79, 0.486);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 6.4rem;
+  padding-bottom: 3.2rem;
+}
+
+.todo-form input,
+.update-form-input {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+.todo-form input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696, -13px -13px 100px #ffffff;
+}
+
+.todo-form button {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Lilita One", sans-serif;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.todo-form button:active,
+.todo-form button:hover {
+  color: #495057;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  cursor: pointer;
+}
+
+.list-items {
+  width: 90%;
+  padding: 3.6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4.5rem;
+}
+
+.list-item-container {
+  padding: 1.2rem 2.4rem;
+  border-radius: 20px;
+  background: #f0f0f0;
+  box-shadow: inset -5px 5px 10px #cacaca, inset 5px -5px 10px #cacaca;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  column-gap: 2.4rem;
+}
+
+.list-item {
+  font-size: 18px;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+.update-button,
+.delete-button {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 1.2rem;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.update-button:active,
+.delete-button:active,
+.update-button:hover,
+.delete-button:hover {
+  color: #495057;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.update-form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.update-form-input {
+  width: 100%;
 }
